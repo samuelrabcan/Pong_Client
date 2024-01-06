@@ -25,7 +25,7 @@ if (NOT raylib_FOUND) # If there's none, fetch and build raylib
 endif()
 
 # Our Project
-add_executable(${PROJECT_NAME} main.c Paddle.c Paddle.h Ball.c Ball.h raylib_wrapper.h)
+add_executable(${PROJECT_NAME} main.c Paddle.c Paddle.h Ball.c Ball.h)
 #set(raylib_VERBOSE 1)
 
 target_link_libraries(${PROJECT_NAME} raylib)
