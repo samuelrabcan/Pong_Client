@@ -1,5 +1,7 @@
-#ifndef PONG_SEMPRACA_2_PADDLE_H
-#define PONG_SEMPRACA_2_PADDLE_H
+// Paddle.h
+
+#ifndef PADDLE_H
+#define PADDLE_H
 
 #include "raylib.h"
 
@@ -10,15 +12,13 @@ typedef struct Controls {
 
 typedef struct Paddle {
     RLRectangle rect;
-    int width;
-    int height;
     Controls controls; // New field for controls
 } Paddle;
 
-void InitPaddle(Paddle* paddle, int startPositionX, int startPositionY, int widthInput, int heightInput);
-void MovePaddle(Paddle* paddle, int offsetX, int offsetY);
-Vector2 GetPaddlePosition(Paddle* paddle);
-RLRectangle GetPaddleRect(Paddle* paddle);
-void SetPaddlePosition(Paddle* paddle, int newX, int newY);
+void InitPaddle(Paddle* paddle, int paddleCenterX, int paddleCenterY, int upKey, int downKey);
+void MovePaddle(Paddle* paddle, int distance);
+Vector2 GetPaddlePosition(const Paddle* paddle);
+RLRectangle GetPaddleRect(const Paddle* paddle);
+void SetPaddlePosition(Paddle* paddle, int newY);
 
-#endif //PONG_SEMPRACA_2_PADDLE_H
+#endif // PADDLE_H
