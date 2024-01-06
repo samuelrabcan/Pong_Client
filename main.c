@@ -9,16 +9,13 @@
 #include "Ball.h"
 #include "Paddle.h"
 
-#define SCREEN_WIDTH 800
-#define SCREEN_HEIGHT 600
-// Replace magic numbers with named constants
 #define MAX_SCORE 3
 #define MAX_INPUT_CHARS 9
+
 #define TITLE_SIZE 65
 #define TEXT_LARGE 40
 #define TEXT_MEDIUM 30
 #define TEXT_SMALL 20
-
 
 // Function declarations
 void drawMainMenu(int screenWidth, int screenHeight, int titleSize, int textLarge, int textSmall);
@@ -40,12 +37,6 @@ int main(int argc, char* argv[]) {
     const int screenWidth = 800;
     const int screenHeight = 600;
 
-    // Definovanie veľkostí textu
-    int titleSize = 65;
-    int textLarge = 40;
-    int textMedium = 30;
-    int textSmall = 20;
-
     InitWindow(screenWidth, screenHeight, "Pong Game Menu");
 
     Color playerColor = RAYWHITE;
@@ -61,9 +52,9 @@ int main(int argc, char* argv[]) {
         ClearBackground(BLACK);
 
         if (currentMenu == 0) {
-            drawMainMenu(screenWidth, screenHeight, titleSize, textLarge, textSmall);
+            drawMainMenu(screenWidth, screenHeight, TITLE_SIZE, TEXT_LARGE, TEXT_SMALL);
         } else if (currentMenu == 1) {
-            drawGameMenu(screenWidth, screenHeight, textMedium, textLarge, &playerColor, name, &letterCount);
+            drawGameMenu(screenWidth, screenHeight, TEXT_MEDIUM, TEXT_LARGE, &playerColor, name, &letterCount);
 
             // Check if the user pressed ENTER to start the game
             if (IsKeyPressed(KEY_ENTER)) {
@@ -107,7 +98,7 @@ int playGame(SOCKET sock, int screenWidth, int screenHeight, Color playerColor, 
     if (strcmp(buffer, "hrac1") == 0) {
         playerNumber = 1;
         hrac1_x = 50;
-        hrac2_x = SCREEN_WIDTH - 60;
+        hrac2_x = screenWidth - 60;
         if (sendPlayerInfo(sock, playerColor, name) == SOCKET_ERROR) {
             return endClient(1, sock);
         }
@@ -116,7 +107,7 @@ int playGame(SOCKET sock, int screenWidth, int screenHeight, Color playerColor, 
         }
     } else if (strcmp(buffer, "hrac2") == 0) {
         playerNumber = 2;
-        hrac1_x = SCREEN_WIDTH - 60;
+        hrac1_x = screenWidth - 60;
         hrac2_x = 50;
         if (receivePlayerInfo(sock, &playerColor2, name2) == SOCKET_ERROR) {
             return endClient(1, sock);
@@ -132,7 +123,7 @@ int playGame(SOCKET sock, int screenWidth, int screenHeight, Color playerColor, 
     // Display the "Waiting for other player!" message
     if (playerNumber == 1) {
         BeginDrawing();
-        RLDrawText("Waiting for other player!", SCREEN_WIDTH / 2 - MeasureText("Waiting for other player!", TEXT_LARGE) / 2, SCREEN_HEIGHT / 2, TEXT_LARGE, RAYWHITE);
+        RLDrawText("Waiting for other player!", screenWidth/ 2 - MeasureText("Waiting for other player!", TEXT_LARGE) / 2, screenHeight/ 2, TEXT_LARGE, RAYWHITE);
         EndDrawing();
         Sleep(2000);
     }
@@ -142,8 +133,8 @@ int playGame(SOCKET sock, int screenWidth, int screenHeight, Color playerColor, 
     InitBall(&ball, 20);
 
     Paddle paddle1, paddle2;
-    InitPaddle(&paddle1, hrac1_x, SCREEN_HEIGHT / 2 - 25, SCREEN_WIDTH, SCREEN_HEIGHT);
-    InitPaddle(&paddle2, hrac2_x, SCREEN_HEIGHT / 2 - 25, SCREEN_WIDTH, SCREEN_HEIGHT);
+    InitPaddle(&paddle1, hrac1_x, screenHeight / 2 - 25, screenWidth, screenHeight);
+    InitPaddle(&paddle2, hrac2_x, screenHeight / 2 - 25, screenWidth, screenHeight);
 
     int score2 = 0, score1 = 0;
 
@@ -168,9 +159,9 @@ int playGame(SOCKET sock, int screenWidth, int screenHeight, Color playerColor, 
 
         if (playerNumber == 1){
             RLDrawText(TextFormat("%s: %i", name, score1), 10, 10, 20, BLACK);
-            RLDrawText(TextFormat("%s: %i", name2, score2), SCREEN_WIDTH - 110, 10, 20, BLACK);
+            RLDrawText(TextFormat("%s: %i", name2, score2), screenWidth - 110, 10, 20, BLACK);
         } else {
-            RLDrawText(TextFormat("%s : %i", name, score2), SCREEN_WIDTH - 110, 10, 20, BLACK);
+            RLDrawText(TextFormat("%s : %i", name, score2), screenWidth - 110, 10, 20, BLACK);
             RLDrawText(TextFormat("%s: %i", name2, score1), 10, 10, 20, BLACK);
         }
 
@@ -180,7 +171,7 @@ int playGame(SOCKET sock, int screenWidth, int screenHeight, Color playerColor, 
             BeginDrawing();
             ClearBackground(RAYWHITE);
             RLDrawText(TextFormat("%s wins!", (playerNumber == 1) ? name : name2),
-                       SCREEN_WIDTH / 2 - 50, SCREEN_HEIGHT / 2 + 30, TEXT_MEDIUM, BLACK);
+                       screenWidth / 2 - 50, screenHeight / 2 + 30, TEXT_MEDIUM, BLACK);
             EndDrawing();
             Sleep(3000); // Pause for 3 seconds
             RLCloseWindow();
