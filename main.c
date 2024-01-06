@@ -237,7 +237,6 @@ void drawMainMenu(int screenWidth, int screenHeight, int titleSize, int textLarg
     RLDrawText("QUIT", screenWidth / 2 - MeasureText("QUIT", textLarge) / 2, 300, textLarge, quitColor);
 }
 
-
 void drawGameMenu(int screenWidth, int screenHeight, int textMedium, int textLarge, Color* playerColor, char* name, int* letterCount) {
     RLDrawText("Enter your name:", 10, 10, textMedium, RAYWHITE);
     RLDrawText(name, 10, 40, textLarge, *playerColor);
@@ -285,7 +284,6 @@ void drawGameMenu(int screenWidth, int screenHeight, int textMedium, int textLar
 
     RLDrawText("Press ENTER to start game", 10, 250, textMedium, RAYWHITE);
 }
-
 
 int connectToServer(char* serverIP, int port, SOCKET* sock) {
     // Initializing winsock
@@ -349,7 +347,6 @@ int receivePlayerInfo(SOCKET sock, Color* playerColor2, char* name2) {
     return 0;
 }
 
-
 int sendPaddlePosition(SOCKET sock, float position) {
     char message[256];
     sprintf(message, "%f", position);
@@ -369,7 +366,6 @@ float receivePaddlePosition(SOCKET sock) {
     buffer[sizeof(buffer) - 1] = '\0';
     return strtof(buffer, NULL);
 }
-
 
 int endClient(int returnCode, SOCKET sock) {
     send(sock, "END", 3, 0);
