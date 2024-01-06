@@ -311,9 +311,7 @@ int connectToServer(char* serverIP, int port, SOCKET* sock) {
     return 0;
 }
 
-int sendPlayerInfo(SOCKET sock, Color playerColor, char* name) {
-    char message[256];
-    sprintf(message, "%d,%d,%d,%d,%s", playerColor.r, playerColor.g, playerColor.b, playerColor.a, name);
+int sendData(SOCKET sock, char* message) {
     if (send(sock, message, strlen(message), 0) == SOCKET_ERROR) {
         printf("Chyba - send.\n");
         return SOCKET_ERROR;
@@ -321,14 +319,27 @@ int sendPlayerInfo(SOCKET sock, Color playerColor, char* name) {
     return 0;
 }
 
-int receivePlayerInfo(SOCKET sock, Color* playerColor2, char* name2) {
-    char buffer[256];
-    memset(buffer, 0, sizeof(buffer));
-    if (recv(sock, buffer, sizeof(buffer) - 1, 0) == SOCKET_ERROR) {
+int receiveData(SOCKET sock, char* buffer, int bufferSize) {
+    memset(buffer, 0, bufferSize);
+    if (recv(sock, buffer, bufferSize - 1, 0) == SOCKET_ERROR) {
         printf("Chyba - recv.\n");
         return SOCKET_ERROR;
     }
-    buffer[sizeof(buffer) - 1] = '\0';
+    buffer[bufferSize - 1] = '\0';
+    return 0;
+}
+
+int sendPlayerInfo(SOCKET sock, Color playerColor, char* name) {
+    char message[256];
+    sprintf(message, "%d,%d,%d,%d,%s", playerColor.r, playerColor.g, playerColor.b, playerColor.a, name);
+    return sendData(sock, message);
+}
+
+int receivePlayerInfo(SOCKET sock, Color* playerColor2, char* name2) {
+    char buffer[256];
+    if (receiveData(sock, buffer, sizeof(buffer)) == SOCKET_ERROR) {
+        return SOCKET_ERROR;
+    }
     int r, g, b, a;
     sscanf(buffer, "%d,%d,%d,%d,%s", &r, &g, &b, &a, name2);
     playerColor2->r = r;
@@ -341,22 +352,17 @@ int receivePlayerInfo(SOCKET sock, Color* playerColor2, char* name2) {
 int sendPaddlePosition(SOCKET sock, float position) {
     char message[256];
     sprintf(message, "%f", position);
-    if (send(sock, message, strlen(message), 0) == SOCKET_ERROR) {
-        printf("Chyba - send.\n");
-        return SOCKET_ERROR;
-    }
-    return 0;
+    return sendData(sock, message);
 }
 
 float receivePaddlePosition(SOCKET sock) {
     char buffer[256];
-    if (recv(sock, buffer, sizeof(buffer) - 1, 0) == SOCKET_ERROR) {
-        printf("Chyba - recv.\n");
+    if (receiveData(sock, buffer, sizeof(buffer)) == SOCKET_ERROR) {
         return SOCKET_ERROR;
     }
-    buffer[sizeof(buffer) - 1] = '\0';
     return strtof(buffer, NULL);
 }
+
 
 int endClient(int returnCode, SOCKET sock) {
     send(sock, "END", 3, 0);
