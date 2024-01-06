@@ -1,0 +1,3 @@
+C:/POS/Pong_SemPraca_2/cmake-build-debug-vs/_deps/raylib-subbuild/CMakeFiles/raylib-populate.dir
+C:/POS/Pong_SemPraca_2/cmake-build-debug-vs/_deps/raylib-subbuild/CMakeFiles/edit_cache.dir
+C:/POS/Pong_SemPraca_2/cmake-build-debug-vs/_deps/raylib-subbuild/CMakeFiles/rebuild_cache.dir

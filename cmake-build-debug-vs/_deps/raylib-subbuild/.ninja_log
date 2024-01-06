@@ -1,0 +1,21 @@
+# ninja log v5
+0	31	7260137634245624	raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-mkdir	f133da492cbd386d
+3001	3027	7260137664205984	C:/POS/Pong_SemPraca_2/cmake-build-debug-vs/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-patch	93a805a5358759b6
+0	31	7260137634245624	C:/POS/Pong_SemPraca_2/cmake-build-debug-vs/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-mkdir	f133da492cbd386d
+32	2974	7260137663685986	raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-download	447ef2ad8085478d
+32	2974	7260137663685986	C:/POS/Pong_SemPraca_2/cmake-build-debug-vs/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-download	447ef2ad8085478d
+2975	3000	7260137663945984	raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-update	a92ee110ca771681
+2975	3000	7260137663945984	C:/POS/Pong_SemPraca_2/cmake-build-debug-vs/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-update	a92ee110ca771681
+3001	3027	7260137664205984	raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-patch	93a805a5358759b6
+3027	3051	7260137664455987	raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-configure	faad77035f431ead
+3027	3051	7260137664455987	C:/POS/Pong_SemPraca_2/cmake-build-debug-vs/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-configure	faad77035f431ead
+3051	3077	7260137664705985	raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-build	f631b296200902f9
+3051	3077	7260137664705985	C:/POS/Pong_SemPraca_2/cmake-build-debug-vs/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-build	f631b296200902f9
+3128	3163	7260137665565985	raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-done	8da656ff1589be61
+3077	3101	7260137664955985	raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-install	9b948edad7231941
+3077	3101	7260137664955985	C:/POS/Pong_SemPraca_2/cmake-build-debug-vs/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-install	9b948edad7231941
+3102	3128	7260137665215985	raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-test	a523c5e2a5fc4f08
+3102	3128	7260137665215985	C:/POS/Pong_SemPraca_2/cmake-build-debug-vs/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-test	a523c5e2a5fc4f08
+3128	3163	7260137665565985	CMakeFiles/raylib-populate-complete	8da656ff1589be61
+3128	3163	7260137665565985	C:/POS/Pong_SemPraca_2/cmake-build-debug-vs/_deps/raylib-subbuild/CMakeFiles/raylib-populate-complete	8da656ff1589be61
+3128	3163	7260137665565985	C:/POS/Pong_SemPraca_2/cmake-build-debug-vs/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-done	8da656ff1589be61
