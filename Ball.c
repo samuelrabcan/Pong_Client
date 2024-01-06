@@ -1,52 +1,77 @@
+// Ball.c
+
+
 #include "Ball.h"
 
-void InitBall(Ball* ball, Vector2 startCoordinates, int width, int height, int radius) {
-    ball->position = startCoordinates;
-    ball->velocity = (Vector2){2, 2}; // rychlosť lopty
-    ball->radius = radius; // velkosť lopty
+void InitBall(Ball* ball, int radius) {
+    ball->startPos = (Vector2){GetScreenWidth() / 2, GetScreenHeight() / 2};
+    ball->position = ball->startPos;
+    ball->velocity = (Vector2){3, 3}; // Ball speed
+    ball->radius = radius;            // Ball size
     ball->color = BLACK;
-    ball->width = width;
-    ball->height = height;
+    ball->score.player1 = 0;  // Initialize scores
+    ball->score.player2 = 0;
 }
 
-void MoveBall(Ball* ball, RLRectangle player1Bounds, RLRectangle player2Bounds, int* score1N, int* score2N) {
+void MoveBall(Ball* ball, RLRectangle paddle1, RLRectangle paddle2) {
     ball->position.x += ball->velocity.x;
     ball->position.y += ball->velocity.y;
 
-    if (ball->position.y < 0 || ball->position.y > ball->height - 2*ball->radius) {
-        ball->velocity.y *= -1;
-    }
+    // Bounce off the top and bottom walls
+    BounceBallOffWalls(ball);
 
-    // Check if the ball was hit by player 1
-    if (CheckCollisionCircleRec(ball->position, ball->radius, player1Bounds)) {
-        ball->velocity.x *= -1.2;
-    }
-
-    // Check if the ball was hit by player 2
-    if (CheckCollisionCircleRec(ball->position, ball->radius, player2Bounds)) {
-        ball->velocity.x *= -1.2;
-    }
+    // Check if the ball was hit by players
+    CheckIfBallWasHit(ball, 1.1, paddle1);
+    CheckIfBallWasHit(ball, 1.1, paddle2);
 
     // Check if the ball scored
-    if (ball->position.x < 0) {
-        ball->position = (Vector2){ball->width / 2, ball->height / 2};
-        (*score1N)++;
-        ball->velocity.x = 2;
-        ball->velocity.y = 2;
-    }
+    if (CheckIfPlayer1Scored(ball))
+        ball->score.player1++;
 
-    if (ball->position.x > ball->width) {
-        ball->position = (Vector2){ball->width / 2, ball->height / 2};
-        (*score2N)++;
-        ball->velocity.x = 2;
-        ball->velocity.y = 2;
+    if (CheckIfPlayer2Scored(ball))
+        ball->score.player2++;
+}
+
+void CheckIfBallWasHit(Ball* ball, double velocityMulti, RLRectangle paddle) {
+    if (CheckCollisionCircleRec(ball->position, ball->radius, paddle)) {
+        ball->velocity.x = ball->velocity.x * -velocityMulti;
+        ball->velocity.y = ball->velocity.y * velocityMulti;
     }
+}
+
+void BounceBallOffWalls(Ball* ball) {
+    if (ball->position.y < 0 || ball->position.y > GetScreenHeight() - ball->radius) {
+        ball->velocity.y *= -1;
+    }
+}
+
+_Bool CheckIfPlayer1Scored(Ball* ball) {
+    if (ball->position.x < 0) {
+        ball->position = ball->startPos;
+        ball->velocity = (Vector2){2, 2};
+        return true;
+    }
+    return false;
+}
+
+_Bool CheckIfPlayer2Scored(Ball* ball) {
+    if (ball->position.x > GetScreenWidth()) {
+        ball->position = ball->startPos;
+        ball->velocity = (Vector2){3, 3};
+        return true;
+    }
+    return false;
+}
+
+void DrawBall(const Ball* ball) {
+    DrawCircleV(ball->position, ball->radius, ball->color);
 }
 
 Vector2 GetBallPosition(Ball* ball) {
     return ball->position;
 }
 
-void DrawBall(Ball* ball) {
-    DrawCircleV(ball->position, ball->radius, ball->color);
+Vector2 SetBallPosition(Ball* ball, int x, int y) {
+    ball->position.x = x;
+    ball->position.y = y;
 }

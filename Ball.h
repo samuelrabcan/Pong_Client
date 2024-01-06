@@ -1,20 +1,32 @@
-#ifndef PONG_SEMPRACA_2_BALL_H
-#define PONG_SEMPRACA_2_BALL_H
+// Ball.h
+
+#ifndef BALL_H
+#define BALL_H
 
 #include "raylib.h"
 
+typedef struct Score {
+    int player1;
+    int player2;
+} Score;
+
 typedef struct Ball {
     Vector2 position;
+    Vector2 startPos;
     Vector2 velocity;
     int radius;
     Color color;
-    int width;
-    int height;
+    Score score;  // Score structure
 } Ball;
 
-void InitBall(Ball* ball, Vector2 StartCoordinates, int widthInput, int height, int radius);
-void MoveBall(Ball* ball, RLRectangle player1Bounds, RLRectangle player2Bounds, int* score1N, int* score2N);
+void InitBall(Ball* ball, int radius);
+void MoveBall(Ball* ball, RLRectangle paddle1, RLRectangle paddle2);
+void DrawBall(const Ball* ball);
+_Bool CheckIfPlayer1Scored(Ball* ball);
+_Bool CheckIfPlayer2Scored(Ball* ball);
+void BounceBallOffWalls(Ball* ball);
+void CheckIfBallWasHit(Ball* ball, double velocityMulti, RLRectangle paddle);
 Vector2 GetBallPosition(Ball* ball);
-void DrawBall(Ball* ball);
+Vector2 SetBallPosition(Ball* ball, int x, int y) ;
 
-#endif //PONG_SEMPRACA_2_BALL_H
+#endif // BALL_H
