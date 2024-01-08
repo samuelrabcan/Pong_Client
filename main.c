@@ -402,6 +402,7 @@ float receivePaddlePosition(SOCKET sock) {
     return strtof(buffer, NULL);
 }
 
+
 int endClient(int returnCode, SOCKET sock) {
     send(sock, "END", 3, 0);
     closesocket(sock);
