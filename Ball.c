@@ -16,7 +16,6 @@ void InitBall(Ball* ball, int radius) {
 void MoveBall(Ball* ball, RLRectangle paddle1, RLRectangle paddle2) {
     ball->position.x += ball->velocity.x;
     ball->position.y += ball->velocity.y;
-
     // Bounce off the top and bottom walls
     BounceBallOffWalls(ball);
 
@@ -46,16 +45,16 @@ void BounceBallOffWalls(Ball* ball) {
 }
 
 _Bool CheckIfPlayer1Scored(Ball* ball) {
-    if (ball->position.x < 0) {
+    if (ball->position.x > GetScreenWidth()) {
         ball->position = ball->startPos;
-        ball->velocity = (Vector2){2, 2};
+        ball->velocity = (Vector2){3, 3};
         return true;
     }
     return false;
 }
 
 _Bool CheckIfPlayer2Scored(Ball* ball) {
-    if (ball->position.x > GetScreenWidth()) {
+    if (ball->position.x < 0) {
         ball->position = ball->startPos;
         ball->velocity = (Vector2){3, 3};
         return true;
@@ -67,11 +66,3 @@ void DrawBall(const Ball* ball) {
     DrawCircleV(ball->position, ball->radius, ball->color);
 }
 
-Vector2 GetBallPosition(Ball* ball) {
-    return ball->position;
-}
-
-Vector2 SetBallPosition(Ball* ball, int x, int y) {
-    ball->position.x = x;
-    ball->position.y = y;
-}

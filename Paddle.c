@@ -1,20 +1,12 @@
 #include "Paddle.h"
 
-void InitPaddle(Paddle* paddle, int paddleCenterX, int paddleCenterY, int upKey, int downKey) {
+void InitPaddle(Paddle* paddle, int paddleCenterX, int paddleCenterY) {
     paddle->rect = (RLRectangle){paddleCenterX, paddleCenterY, 20, 140}; // Change paddle size
-    paddle->controls.upKey = upKey;
-    paddle->controls.downKey = downKey;
 }
 
 void MovePaddle(Paddle* paddle, int distance) {
-    paddle->rect.y += distance;
-
-    if (paddle->rect.y < 0) {
-        paddle->rect.y = 0;
-    }
-    if (paddle->rect.y > GetScreenHeight() - paddle->rect.height) {
-        paddle->rect.y = GetScreenHeight() - paddle->rect.height;
-    }
+    int position = paddle->rect.y += distance;
+    paddle->rect.y  = CheckPaddlePosition(paddle, position);
 }
 
 Vector2 GetPaddlePosition(const Paddle* paddle) {
@@ -25,6 +17,16 @@ RLRectangle GetPaddleRect(const Paddle* paddle) {
     return paddle->rect;
 }
 
-void SetPaddlePosition(Paddle* paddle, int newY) {
-    paddle->rect.y = newY;
+void SetPaddlePosition(Paddle* paddle, int position) {
+    paddle->rect.y = position;
+}
+
+float CheckPaddlePosition(Paddle* paddle, float position) {
+    if (position < 0){
+        return 0;
+    }
+    if (position > GetScreenHeight() - paddle->rect.height) {
+        return GetScreenHeight() - paddle->rect.height;
+    }
+    return position;
 }
