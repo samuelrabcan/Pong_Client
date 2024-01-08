@@ -39,7 +39,7 @@ events:
       Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.obj"
       
       The C compiler identification is MSVC, found in:
-        C:/POS/Pong_SemPraca_2 - Copyyy/cmake-build-debug-vs/CMakeFiles/3.27.0/CompilerIdC/CMakeCCompilerId.exe
+        C:/POS/Pong_SemPraca_2/cmake-build-debug-vs/CMakeFiles/3.27.0/CompilerIdC/CMakeCCompilerId.exe
       
   -
     kind: "message-v1"
@@ -51,7 +51,7 @@ events:
     message: |
       Detecting C compiler /showIncludes prefix:
         main.c
-        Note: including file: C:\\POS\\Pong_SemPraca_2 - Copyyy\\cmake-build-debug-vs\\CMakeFiles\\ShowIncludes\\foo.h
+        Note: including file: C:\\POS\\Pong_SemPraca_2\\cmake-build-debug-vs\\CMakeFiles\\ShowIncludes\\foo.h
         
       Found prefix "Note: including file: "
   -
@@ -63,19 +63,216 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "C:/POS/Pong_SemPraca_2 - Copyyy/cmake-build-debug-vs/CMakeFiles/CMakeScratch/TryCompile-wh95be"
-      binary: "C:/POS/Pong_SemPraca_2 - Copyyy/cmake-build-debug-vs/CMakeFiles/CMakeScratch/TryCompile-wh95be"
+      source: "C:/POS/Pong_SemPraca_2/cmake-build-debug-vs/CMakeFiles/CMakeScratch/TryCompile-6cssrl"
+      binary: "C:/POS/Pong_SemPraca_2/cmake-build-debug-vs/CMakeFiles/CMakeScratch/TryCompile-6cssrl"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
     buildResult:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/POS/Pong_SemPraca_2 - Copyyy/cmake-build-debug-vs/CMakeFiles/CMakeScratch/TryCompile-wh95be'
+        Change Dir: 'C:/POS/Pong_SemPraca_2/cmake-build-debug-vs/CMakeFiles/CMakeScratch/TryCompile-6cssrl'
         
-        Run Build Command(s): "C:/Program Files/JetBrains/CLion 2023.3/bin/ninja/win/x64/ninja.exe" -v cmTC_52999
-        [1/2] C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1435~1.322\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS /W3  /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\\cmTC_52999.dir\\CMakeCCompilerABI.c.obj /FdCMakeFiles\\cmTC_52999.dir\\ /FS -c "C:\\Program Files\\JetBrains\\CLion 2023.3\\bin\\cmake\\win\\x64\\share\\cmake-3.27\\Modules\\CMakeCCompilerABI.c"
-        [2/2] cmd.exe /C "cd . && "C:\\Program Files\\JetBrains\\CLion 2023.3\\bin\\cmake\\win\\x64\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_52999.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1435~1.322\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_52999.dir\\CMakeCCompilerABI.c.obj  /out:cmTC_52999.exe /implib:cmTC_52999.lib /pdb:cmTC_52999.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        Run Build Command(s): "C:/Program Files/JetBrains/CLion 2023.3/bin/ninja/win/x64/ninja.exe" -v cmTC_5d05d
+        [1/2] C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1435~1.322\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS /W3  /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\\cmTC_5d05d.dir\\CMakeCCompilerABI.c.obj /FdCMakeFiles\\cmTC_5d05d.dir\\ /FS -c "C:\\Program Files\\JetBrains\\CLion 2023.3\\bin\\cmake\\win\\x64\\share\\cmake-3.27\\Modules\\CMakeCCompilerABI.c"
+        [2/2] cmd.exe /C "cd . && "C:\\Program Files\\JetBrains\\CLion 2023.3\\bin\\cmake\\win\\x64\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_5d05d.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1435~1.322\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_5d05d.dir\\CMakeCCompilerABI.c.obj  /out:cmTC_5d05d.exe /implib:cmTC_5d05d.lib /pdb:cmTC_5d05d.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
         
       exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/JetBrains/CLion 2023.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/JetBrains/CLion 2023.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/JetBrains/CLion 2023.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "cmake-build-debug-vs/_deps/raylib-src/CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.35.32215/bin/Hostx64/x64/cl.exe 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      Microsoft (R) C/C++ Optimizing Compiler Version 19.35.32217.1 for x64
+      Copyright (C) Microsoft Corporation.  All rights reserved.
+      
+      CMakeCXXCompilerId.cpp
+      Microsoft (R) Incremental Linker Version 14.35.32217.1
+      Copyright (C) Microsoft Corporation.  All rights reserved.
+      
+      /out:CMakeCXXCompilerId.exe 
+      CMakeCXXCompilerId.obj 
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.exe"
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.obj"
+      
+      The CXX compiler identification is MSVC, found in:
+        C:/POS/Pong_SemPraca_2/cmake-build-debug-vs/CMakeFiles/3.27.0/CompilerIdCXX/CMakeCXXCompilerId.exe
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/JetBrains/CLion 2023.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:1158 (message)"
+      - "C:/Program Files/JetBrains/CLion 2023.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:221 (CMAKE_DETERMINE_MSVC_SHOWINCLUDES_PREFIX)"
+      - "C:/Program Files/JetBrains/CLion 2023.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "cmake-build-debug-vs/_deps/raylib-src/CMakeLists.txt:2 (project)"
+    message: |
+      Detecting CXX compiler /showIncludes prefix:
+        main.c
+        Note: including file: C:\\POS\\Pong_SemPraca_2\\cmake-build-debug-vs\\CMakeFiles\\ShowIncludes\\foo.h
+        
+      Found prefix "Note: including file: "
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/JetBrains/CLion 2023.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "C:/Program Files/JetBrains/CLion 2023.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "cmake-build-debug-vs/_deps/raylib-src/CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "C:/POS/Pong_SemPraca_2/cmake-build-debug-vs/CMakeFiles/CMakeScratch/TryCompile-zf1h83"
+      binary: "C:/POS/Pong_SemPraca_2/cmake-build-debug-vs/CMakeFiles/CMakeScratch/TryCompile-zf1h83"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/POS/Pong_SemPraca_2/cmake-build-debug-vs/CMakeFiles/CMakeScratch/TryCompile-zf1h83'
+        
+        Run Build Command(s): "C:/Program Files/JetBrains/CLion 2023.3/bin/ninja/win/x64/ninja.exe" -v cmTC_af080
+        [1/2] C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1435~1.322\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /W3 /GR /EHsc  /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\\cmTC_af080.dir\\CMakeCXXCompilerABI.cpp.obj /FdCMakeFiles\\cmTC_af080.dir\\ /FS -c "C:\\Program Files\\JetBrains\\CLion 2023.3\\bin\\cmake\\win\\x64\\share\\cmake-3.27\\Modules\\CMakeCXXCompilerABI.cpp"
+        [2/2] cmd.exe /C "cd . && "C:\\Program Files\\JetBrains\\CLion 2023.3\\bin\\cmake\\win\\x64\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_af080.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1435~1.322\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_af080.dir\\CMakeCXXCompilerABI.cpp.obj  /out:cmTC_af080.exe /implib:cmTC_af080.lib /pdb:cmTC_af080.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/JetBrains/CLion 2023.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Program Files/JetBrains/CLion 2023.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "C:/Program Files/JetBrains/CLion 2023.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CheckCCompilerFlag.cmake:51 (cmake_check_compiler_flag)"
+      - "cmake-build-debug-vs/_deps/raylib-src/cmake/AddIfFlagCompiles.cmake:3 (CHECK_C_COMPILER_FLAG)"
+      - "cmake-build-debug-vs/_deps/raylib-src/cmake/CompilerFlags.cmake:5 (add_if_flag_compiles)"
+      - "cmake-build-debug-vs/_deps/raylib-src/CMakeLists.txt:29 (include)"
+    checks:
+      - "Performing Test COMPILER_HAS_THOSE_TOGGLES"
+    directories:
+      source: "C:/POS/Pong_SemPraca_2/cmake-build-debug-vs/CMakeFiles/CMakeScratch/TryCompile-vxn3oa"
+      binary: "C:/POS/Pong_SemPraca_2/cmake-build-debug-vs/CMakeFiles/CMakeScratch/TryCompile-vxn3oa"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_MODULE_PATH: "C:/POS/Pong_SemPraca_2/cmake-build-debug-vs/_deps/raylib-src/cmake"
+    buildResult:
+      variable: "COMPILER_HAS_THOSE_TOGGLES"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/POS/Pong_SemPraca_2/cmake-build-debug-vs/CMakeFiles/CMakeScratch/TryCompile-vxn3oa'
+        
+        Run Build Command(s): "C:/Program Files/JetBrains/CLion 2023.3/bin/ninja/win/x64/ninja.exe" -v cmTC_1c23a
+        [1/2] C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1435~1.322\\bin\\Hostx64\\x64\\cl.exe  /nologo -DCOMPILER_HAS_THOSE_TOGGLES  /DWIN32 /D_WINDOWS /W3  /MDd /Zi /Ob0 /Od /RTC1   -Werror=pointer-arith /showIncludes /FoCMakeFiles\\cmTC_1c23a.dir\\src.c.obj /FdCMakeFiles\\cmTC_1c23a.dir\\ /FS -c C:\\POS\\Pong_SemPraca_2\\cmake-build-debug-vs\\CMakeFiles\\CMakeScratch\\TryCompile-vxn3oa\\src.c
+        FAILED: CMakeFiles/cmTC_1c23a.dir/src.c.obj 
+        C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1435~1.322\\bin\\Hostx64\\x64\\cl.exe  /nologo -DCOMPILER_HAS_THOSE_TOGGLES  /DWIN32 /D_WINDOWS /W3  /MDd /Zi /Ob0 /Od /RTC1   -Werror=pointer-arith /showIncludes /FoCMakeFiles\\cmTC_1c23a.dir\\src.c.obj /FdCMakeFiles\\cmTC_1c23a.dir\\ /FS -c C:\\POS\\Pong_SemPraca_2\\cmake-build-debug-vs\\CMakeFiles\\CMakeScratch\\TryCompile-vxn3oa\\src.c
+        cl : Command line error D8021 : invalid numeric argument '/Werror=pointer-arith'
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/JetBrains/CLion 2023.3/bin/cmake/win/x64/share/cmake-3.27/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Program Files/JetBrains/CLion 2023.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "C:/Program Files/JetBrains/CLion 2023.3/bin/cmake/win/x64/share/cmake-3.27/Modules/FindThreads.cmake:97 (CHECK_C_SOURCE_COMPILES)"
+      - "C:/Program Files/JetBrains/CLion 2023.3/bin/cmake/win/x64/share/cmake-3.27/Modules/FindThreads.cmake:163 (_threads_check_libc)"
+      - "cmake-build-debug-vs/_deps/raylib-src/src/external/glfw/CMakeLists.txt:64 (find_package)"
+    checks:
+      - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
+    directories:
+      source: "C:/POS/Pong_SemPraca_2/cmake-build-debug-vs/CMakeFiles/CMakeScratch/TryCompile-sc6aim"
+      binary: "C:/POS/Pong_SemPraca_2/cmake-build-debug-vs/CMakeFiles/CMakeScratch/TryCompile-sc6aim"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_MODULE_PATH: "C:/POS/Pong_SemPraca_2/cmake-build-debug-vs/_deps/raylib-src/cmake;C:/POS/Pong_SemPraca_2/cmake-build-debug-vs/_deps/raylib-src/src/external/glfw/CMake/modules"
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/POS/Pong_SemPraca_2/cmake-build-debug-vs/CMakeFiles/CMakeScratch/TryCompile-sc6aim'
+        
+        Run Build Command(s): "C:/Program Files/JetBrains/CLion 2023.3/bin/ninja/win/x64/ninja.exe" -v cmTC_d0d7f
+        [1/2] C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1435~1.322\\bin\\Hostx64\\x64\\cl.exe  /nologo -DCMAKE_HAVE_LIBC_PTHREAD  /DWIN32 /D_WINDOWS /W3  /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\\cmTC_d0d7f.dir\\src.c.obj /FdCMakeFiles\\cmTC_d0d7f.dir\\ /FS -c C:\\POS\\Pong_SemPraca_2\\cmake-build-debug-vs\\CMakeFiles\\CMakeScratch\\TryCompile-sc6aim\\src.c
+        FAILED: CMakeFiles/cmTC_d0d7f.dir/src.c.obj 
+        C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1435~1.322\\bin\\Hostx64\\x64\\cl.exe  /nologo -DCMAKE_HAVE_LIBC_PTHREAD  /DWIN32 /D_WINDOWS /W3  /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\\cmTC_d0d7f.dir\\src.c.obj /FdCMakeFiles\\cmTC_d0d7f.dir\\ /FS -c C:\\POS\\Pong_SemPraca_2\\cmake-build-debug-vs\\CMakeFiles\\CMakeScratch\\TryCompile-sc6aim\\src.c
+        C:\\POS\\Pong_SemPraca_2\\cmake-build-debug-vs\\CMakeFiles\\CMakeScratch\\TryCompile-sc6aim\\src.c(1): fatal error C1083: Cannot open include file: 'pthread.h': No such file or directory
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/JetBrains/CLion 2023.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CheckLibraryExists.cmake:69 (try_compile)"
+      - "C:/Program Files/JetBrains/CLion 2023.3/bin/cmake/win/x64/share/cmake-3.27/Modules/FindThreads.cmake:112 (CHECK_LIBRARY_EXISTS)"
+      - "C:/Program Files/JetBrains/CLion 2023.3/bin/cmake/win/x64/share/cmake-3.27/Modules/FindThreads.cmake:175 (_threads_check_lib)"
+      - "cmake-build-debug-vs/_deps/raylib-src/src/external/glfw/CMakeLists.txt:64 (find_package)"
+    checks:
+      - "Looking for pthread_create in pthreads"
+    directories:
+      source: "C:/POS/Pong_SemPraca_2/cmake-build-debug-vs/CMakeFiles/CMakeScratch/TryCompile-d2bddc"
+      binary: "C:/POS/Pong_SemPraca_2/cmake-build-debug-vs/CMakeFiles/CMakeScratch/TryCompile-d2bddc"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/POS/Pong_SemPraca_2/cmake-build-debug-vs/_deps/raylib-src/cmake;C:/POS/Pong_SemPraca_2/cmake-build-debug-vs/_deps/raylib-src/src/external/glfw/CMake/modules"
+    buildResult:
+      variable: "CMAKE_HAVE_PTHREADS_CREATE"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/POS/Pong_SemPraca_2/cmake-build-debug-vs/CMakeFiles/CMakeScratch/TryCompile-d2bddc'
+        
+        Run Build Command(s): "C:/Program Files/JetBrains/CLion 2023.3/bin/ninja/win/x64/ninja.exe" -v cmTC_c39bb
+        [1/2] C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1435~1.322\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS /W3 -DCHECK_FUNCTION_EXISTS=pthread_create /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\\cmTC_c39bb.dir\\CheckFunctionExists.c.obj /FdCMakeFiles\\cmTC_c39bb.dir\\ /FS -c C:\\POS\\Pong_SemPraca_2\\cmake-build-debug-vs\\CMakeFiles\\CMakeScratch\\TryCompile-d2bddc\\CheckFunctionExists.c
+        [2/2] cmd.exe /C "cd . && "C:\\Program Files\\JetBrains\\CLion 2023.3\\bin\\cmake\\win\\x64\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_c39bb.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1435~1.322\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_c39bb.dir\\CheckFunctionExists.c.obj  /out:cmTC_c39bb.exe /implib:cmTC_c39bb.lib /pdb:cmTC_c39bb.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  pthreads.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        FAILED: cmTC_c39bb.exe 
+        cmd.exe /C "cd . && "C:\\Program Files\\JetBrains\\CLion 2023.3\\bin\\cmake\\win\\x64\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_c39bb.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1435~1.322\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_c39bb.dir\\CheckFunctionExists.c.obj  /out:cmTC_c39bb.exe /implib:cmTC_c39bb.lib /pdb:cmTC_c39bb.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  pthreads.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        LINK Pass 1: command "C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1435~1.322\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_c39bb.dir\\CheckFunctionExists.c.obj /out:cmTC_c39bb.exe /implib:cmTC_c39bb.lib /pdb:cmTC_c39bb.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console pthreads.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_c39bb.dir/intermediate.manifest CMakeFiles\\cmTC_c39bb.dir/manifest.res" failed (exit code 1104) with the following output:
+        LINK : fatal error LNK1104: cannot open file 'pthreads.lib'
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/JetBrains/CLion 2023.3/bin/cmake/win/x64/share/cmake-3.27/Modules/CheckLibraryExists.cmake:69 (try_compile)"
+      - "C:/Program Files/JetBrains/CLion 2023.3/bin/cmake/win/x64/share/cmake-3.27/Modules/FindThreads.cmake:112 (CHECK_LIBRARY_EXISTS)"
+      - "C:/Program Files/JetBrains/CLion 2023.3/bin/cmake/win/x64/share/cmake-3.27/Modules/FindThreads.cmake:176 (_threads_check_lib)"
+      - "cmake-build-debug-vs/_deps/raylib-src/src/external/glfw/CMakeLists.txt:64 (find_package)"
+    checks:
+      - "Looking for pthread_create in pthread"
+    directories:
+      source: "C:/POS/Pong_SemPraca_2/cmake-build-debug-vs/CMakeFiles/CMakeScratch/TryCompile-srsj8q"
+      binary: "C:/POS/Pong_SemPraca_2/cmake-build-debug-vs/CMakeFiles/CMakeScratch/TryCompile-srsj8q"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/POS/Pong_SemPraca_2/cmake-build-debug-vs/_deps/raylib-src/cmake;C:/POS/Pong_SemPraca_2/cmake-build-debug-vs/_deps/raylib-src/src/external/glfw/CMake/modules"
+    buildResult:
+      variable: "CMAKE_HAVE_PTHREAD_CREATE"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/POS/Pong_SemPraca_2/cmake-build-debug-vs/CMakeFiles/CMakeScratch/TryCompile-srsj8q'
+        
+        Run Build Command(s): "C:/Program Files/JetBrains/CLion 2023.3/bin/ninja/win/x64/ninja.exe" -v cmTC_ce8e2
+        [1/2] C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1435~1.322\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS /W3 -DCHECK_FUNCTION_EXISTS=pthread_create /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\\cmTC_ce8e2.dir\\CheckFunctionExists.c.obj /FdCMakeFiles\\cmTC_ce8e2.dir\\ /FS -c C:\\POS\\Pong_SemPraca_2\\cmake-build-debug-vs\\CMakeFiles\\CMakeScratch\\TryCompile-srsj8q\\CheckFunctionExists.c
+        [2/2] cmd.exe /C "cd . && "C:\\Program Files\\JetBrains\\CLion 2023.3\\bin\\cmake\\win\\x64\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_ce8e2.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1435~1.322\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_ce8e2.dir\\CheckFunctionExists.c.obj  /out:cmTC_ce8e2.exe /implib:cmTC_ce8e2.lib /pdb:cmTC_ce8e2.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  pthread.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        FAILED: cmTC_ce8e2.exe 
+        cmd.exe /C "cd . && "C:\\Program Files\\JetBrains\\CLion 2023.3\\bin\\cmake\\win\\x64\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_ce8e2.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1435~1.322\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_ce8e2.dir\\CheckFunctionExists.c.obj  /out:cmTC_ce8e2.exe /implib:cmTC_ce8e2.lib /pdb:cmTC_ce8e2.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  pthread.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        LINK Pass 1: command "C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1435~1.322\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_ce8e2.dir\\CheckFunctionExists.c.obj /out:cmTC_ce8e2.exe /implib:cmTC_ce8e2.lib /pdb:cmTC_ce8e2.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console pthread.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_ce8e2.dir/intermediate.manifest CMakeFiles\\cmTC_ce8e2.dir/manifest.res" failed (exit code 1104) with the following output:
+        LINK : fatal error LNK1104: cannot open file 'pthread.lib'
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
 ...
